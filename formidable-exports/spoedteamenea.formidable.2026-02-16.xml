@@ -1,0 +1,1260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- generator="WordPress/6.8.3" created="2026-02-16 23:57" -->
+
+<channel>
+	<title>Spoedteam Enea</title>
+	<pubDate>Mon, 16 Feb 2026 23:57:36 +0000</pubDate>
+
+	<form>
+		<id>3</id>
+		<form_key><![CDATA[checkout-abonnee]]></form_key>
+		<name><![CDATA[Abonnee]]></name>
+		<description><![CDATA[]]></description>
+		<created_at>2025-11-26 08:50:50</created_at>
+		<logged_in>0</logged_in>
+		<is_template>0</is_template>
+		<editable>0</editable>
+		<options><![CDATA[{"on_submit_migrated":"1","antispam":"1","custom_style":"1","submit_conditions":{"show_hide":"show","any_all":"all","hide_field_cond":["=="]},"logged_in_role":[""],"single_entry_type":["user"],"cookie_expiration":"720","unique_email_id":"19","protect_files":"0","noindex_files":"0","editable_role":[""],"edit_draft_role":[""],"open_date":"2025-11-26 08:50","before_html":"<legend class=\\\"frm_screen_reader\\\">[form_name]<\/legend>\r\n[if form_name]<h3 class=\\\"frm_form_title\\\">[form_name]<\/h3>[\/if form_name]\r\n[if form_description]<div class=\\\"frm_description\\\">[form_description]<\/div>[\/if form_description]","submit_html":"<div class=\\\"frm_submit frm_flex\\\">\r\n<button class=\\\"frm_button_submit\\\" type=\\\"submit\\\"  [button_action]>[button_label]<\/button>\r\n[if back_button]<button type=\\\"submit\\\" name=\\\"frm_prev_page\\\" formnovalidate=\\\"formnovalidate\\\" class=\\\"frm_prev_page\\\" [back_hook]>[back_label]<\/button>[\/if back_button]\r\n[if save_draft]<button class=\\\"frm_save_draft\\\" [draft_hook]>[draft_label]<\/button>[\/if save_draft]\r\n[if start_over]<a href=\\\"#\\\" tabindex=\\\"0\\\" class=\\\"frm_start_over\\\" [start_over_hook]>[start_over_label]<\/a>[\/if start_over]\r\n<\/div>","show_form":false}]]></options>
+		<status><![CDATA[published]]></status>
+		<parent_form_id>0</parent_form_id>
+		<field>
+			<id>17</id>
+			<field_key><![CDATA[ituhw]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>2</field_order>
+			<form_id>3</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"0","label":"none","classes":"form-section","repeat":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>13</id>
+			<field_key><![CDATA[2wnsd]]></field_key>
+			<name><![CDATA[Aanhef]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[radio]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>4</field_order>
+			<form_id>3</form_id>
+			<required>1</required>
+			<options><![CDATA[[{"label":"De heer","value":"De heer","image":"0"},{"label":"Mevrouw","value":"Mevrouw","image":"0"}]]]></options>
+			<field_options><![CDATA[{"align":"inline","admin_only":[""],"other":"0","in_section":"17","invalid":"[field_name] is invalid","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<div  id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/div>\r\n\t<div class=\\\"frm_opt_container\\\" aria-labelledby=\\\"field_[key]_label\\\" role=\\\"group\\\">[input]<\/div>\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>15</id>
+			<field_key><![CDATA[f9iyg]]></field_key>
+			<name><![CDATA[Name]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[name]]></type>
+			<default_value><![CDATA[{"first":"","middle":"","last":""}]]></default_value>
+			<field_order>6</field_order>
+			<form_id>3</form_id>
+			<required>1</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"17","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<div  id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/div>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","placeholder":{"first":"","middle":"","last":""},"first_desc":"Voorletters","middle_desc":"Tussenvoegsel","last_desc":"Achternaam","name_layout":"first_middle_last"}]]></field_options>
+		</field>
+		<field>
+			<id>16</id>
+			<field_key><![CDATA[eqy7c]]></field_key>
+			<name><![CDATA[Geboortedatum]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[date]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>8</field_order>
+			<form_id>3</form_id>
+			<required>1</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"17","invalid":"[field_name] is invalid","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<label for=\\\"field_[key]\\\" id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/label>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>"}]]></field_options>
+		</field>
+		<field>
+			<id>18</id>
+			<field_key><![CDATA[qsbvo]]></field_key>
+			<name><![CDATA[Section Buttons]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[end_divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>9</field_order>
+			<form_id>3</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>20</id>
+			<field_key><![CDATA[azjid]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>11</field_order>
+			<form_id>3</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"0","label":"none","classes":"form-section frm12 frm_first","repeat":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>19</id>
+			<field_key><![CDATA[uq2ba]]></field_key>
+			<name><![CDATA[Email]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[email]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>13</field_order>
+			<form_id>3</form_id>
+			<required>1</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"autocomplete":"email","admin_only":[""],"in_section":"20","invalid":"[field_name] is invalid","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<label for=\\\"field_[key]\\\" id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/label>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>"}]]></field_options>
+		</field>
+		<field>
+			<id>22</id>
+			<field_key><![CDATA[tz4l3]]></field_key>
+			<name><![CDATA[Telefoonnummer (vast)]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[phone]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>15</field_order>
+			<form_id>3</form_id>
+			<required>1</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"20","invalid":"[field_name] is invalid","classes":"frm6 frm_first","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<label for=\\\"field_[key]\\\" id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/label>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","format":"international"}]]></field_options>
+		</field>
+		<field>
+			<id>23</id>
+			<field_key><![CDATA[zzljl]]></field_key>
+			<name><![CDATA[Telefoonnummer (mobiel)]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[phone]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>16</field_order>
+			<form_id>3</form_id>
+			<required>1</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"20","invalid":"[field_name] is invalid","classes":"frm6","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<label for=\\\"field_[key]\\\" id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/label>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","format":"international"}]]></field_options>
+		</field>
+		<field>
+			<id>25</id>
+			<field_key><![CDATA[qbgd5]]></field_key>
+			<name><![CDATA[Adres]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[address]]></type>
+			<default_value><![CDATA[{"line1":"","line2":"","city":"","state":"","zip":"","country":""}]]></default_value>
+			<field_order>18</field_order>
+			<form_id>3</form_id>
+			<required>1</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"hide_field_cond":[],"admin_only":[""],"in_section":"20","classes":"field-address","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<div  id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/div>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","placeholder":{"line1":"","line2":"","city":"","state":"","zip":"","country":""},"line1_desc":"Straat","line2_desc":"Huisnummer","city_desc":"Stad","state_desc":"Staat\/Provincie","zip_desc":"Postcode","country_desc":"Land"}]]></field_options>
+		</field>
+		<field>
+			<id>21</id>
+			<field_key><![CDATA[ba24r]]></field_key>
+			<name><![CDATA[Section Buttons]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[end_divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>19</field_order>
+			<form_id>3</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>26</id>
+			<field_key><![CDATA[2t619]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>21</field_order>
+			<form_id>3</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"0","label":"none","classes":"form-section","repeat":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>28</id>
+			<field_key><![CDATA[ie90l]]></field_key>
+			<name><![CDATA[Bent u lid van Vierstroom Ledenservice?]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[radio]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>23</field_order>
+			<form_id>3</form_id>
+			<required>1</required>
+			<options><![CDATA[[{"label":"Ja","value":"Ja","image":"0"},{"label":"Nee","value":"Nee","image":"0"}]]]></options>
+			<field_options><![CDATA[{"align":"inline","admin_only":[""],"other":"0","in_section":"26","invalid":"[field_name] is invalid","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>29</id>
+			<field_key><![CDATA[sta2w]]></field_key>
+			<name><![CDATA[Lidnummer Vierstroom Ledenservice]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[number]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>25</field_order>
+			<form_id>3</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"show_hide":"hide","hide_field":["28"],"hide_field_cond":["!="],"hide_opt":["Ja"],"admin_only":[""],"use_global_currency":"0","in_section":"26","invalid":"[field_name] is invalid","classes":"field-conditional","minnum":"0","maxnum":"9999999"}]]></field_options>
+		</field>
+		<field>
+			<id>30</id>
+			<field_key><![CDATA[evouq]]></field_key>
+			<name><![CDATA[Hoe bent u bij ons terecht gekomen?]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[select]]></type>
+			<default_value><![CDATA[Vierstroom Ledenservice]]></default_value>
+			<field_order>27</field_order>
+			<form_id>3</form_id>
+			<required>1</required>
+			<options><![CDATA[[{"label":"Vierstroom Ledenservice","value":"Vierstroom Ledenservice"},{"label":"Thuiszorgorganisatie","value":"Thuiszorgorganisatie"},{"label":"Google","value":"Google"},{"label":"Anders","value":"Anders"}]]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"other":"0","in_section":"26","invalid":"[field_name] is invalid","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<label for=\\\"field_[key]\\\" id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/label>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>"}]]></field_options>
+		</field>
+		<field>
+			<id>31</id>
+			<field_key><![CDATA[vqonc]]></field_key>
+			<name><![CDATA[Anders]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[text]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>29</field_order>
+			<form_id>3</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"show_hide":"hide","hide_field":["30"],"hide_field_cond":["!="],"hide_opt":["Anders"],"admin_only":[""],"use_global_currency":"0","in_section":"26","invalid":"[field_name] is invalid","classes":"field-conditional"}]]></field_options>
+		</field>
+		<field>
+			<id>27</id>
+			<field_key><![CDATA[ax4rv]]></field_key>
+			<name><![CDATA[Section Buttons]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[end_divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>30</field_order>
+			<form_id>3</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>12</id>
+			<field_key><![CDATA[submit]]></field_key>
+			<name><![CDATA[Submit]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[submit]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>35</field_order>
+			<form_id>3</form_id>
+			<required>0</required>
+			<options><![CDATA[[]]]></options>
+			<field_options><![CDATA[{"in_section":"0","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t[input]\r\n<\/div>"}]]></field_options>
+		</field>
+	</form>
+	<form>
+		<id>4</id>
+		<form_key><![CDATA[checkout-contactpersoon]]></form_key>
+		<name><![CDATA[Contactpersoon]]></name>
+		<description><![CDATA[]]></description>
+		<created_at>2025-11-26 13:48:19</created_at>
+		<logged_in>0</logged_in>
+		<is_template>0</is_template>
+		<editable>0</editable>
+		<options><![CDATA[{"on_submit_migrated":"1","antispam":"1","custom_style":"1","submit_conditions":{"show_hide":"show","any_all":"all","hide_field":[],"hide_field_cond":["=="],"hide_opt":[]},"logged_in_role":[""],"single_entry_type":["user"],"cookie_expiration":"720","unique_email_id":"40","protect_files":"0","noindex_files":"0","editable_role":[""],"edit_draft_role":[""],"open_date":"2025-11-26 13:48","before_html":"<legend class=\"frm_screen_reader\">[form_name]<\/legend>\r\n[if form_name]<h3 class=\"frm_form_title\">[form_name]<\/h3>[\/if form_name]\r\n[if form_description]<div class=\"frm_description\">[form_description]<\/div>[\/if form_description]","submit_html":"<div class=\"frm_submit frm_flex\">\r\n<button class=\"frm_button_submit\" type=\"submit\"  [button_action]>[button_label]<\/button>\r\n[if back_button]<button type=\"submit\" name=\"frm_prev_page\" formnovalidate=\"formnovalidate\" class=\"frm_prev_page\" [back_hook]>[back_label]<\/button>[\/if back_button]\r\n[if save_draft]<button class=\"frm_save_draft\" [draft_hook]>[draft_label]<\/button>[\/if save_draft]\r\n[if start_over]<a href=\"#\" tabindex=\"0\" class=\"frm_start_over\" [start_over_hook]>[start_over_label]<\/a>[\/if start_over]\r\n<\/div>","show_form":false}]]></options>
+		<status><![CDATA[published]]></status>
+		<parent_form_id>0</parent_form_id>
+		<field>
+			<id>35</id>
+			<field_key><![CDATA[69vlg]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>2</field_order>
+			<form_id>4</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"0","label":"none","classes":"form-section","repeat":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>37</id>
+			<field_key><![CDATA[wgadv]]></field_key>
+			<name><![CDATA[Aanhef]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[radio]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>4</field_order>
+			<form_id>4</form_id>
+			<required>1</required>
+			<options><![CDATA[[{"label":"De heer","value":"De heer","image":"Option 1","src":false},{"label":"Mevrouw","value":"Mevrouw","image":"Option 2","src":false}]]]></options>
+			<field_options><![CDATA[{"align":"inline","admin_only":[""],"other":"0","in_section":"35","invalid":"[field_name] is invalid","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<div  id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/div>\r\n\t<div class=\\\"frm_opt_container\\\" aria-labelledby=\\\"field_[key]_label\\\" role=\\\"group\\\">[input]<\/div>\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>38</id>
+			<field_key><![CDATA[g5aeg]]></field_key>
+			<name><![CDATA[Naam]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[name]]></type>
+			<default_value><![CDATA[{"first":"","middle":"","last":""}]]></default_value>
+			<field_order>6</field_order>
+			<form_id>4</form_id>
+			<required>1</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"35","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<div  id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/div>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","placeholder":{"first":"","middle":"","last":""},"first_desc":"Voorletters","middle_desc":"Tussenvoegsel","last_desc":"Achternaam","name_layout":"first_middle_last"}]]></field_options>
+		</field>
+		<field>
+			<id>39</id>
+			<field_key><![CDATA[2hsej]]></field_key>
+			<name><![CDATA[Telefoonnummer]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[phone]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>8</field_order>
+			<form_id>4</form_id>
+			<required>1</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"35","invalid":"[field_name] is invalid","classes":"frm6 frm_first","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<label for=\\\"field_[key]\\\" id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/label>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>"}]]></field_options>
+		</field>
+		<field>
+			<id>40</id>
+			<field_key><![CDATA[d82tp]]></field_key>
+			<name><![CDATA[E-mailadres]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[email]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>9</field_order>
+			<form_id>4</form_id>
+			<required>1</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"autocomplete":"email","admin_only":[""],"in_section":"35","invalid":"[field_name] is invalid","classes":"frm6","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<label for=\\\"field_[key]\\\" id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/label>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>"}]]></field_options>
+		</field>
+		<field>
+			<id>36</id>
+			<field_key><![CDATA[89xhf]]></field_key>
+			<name><![CDATA[Section Buttons]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[end_divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>10</field_order>
+			<form_id>4</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>41</id>
+			<field_key><![CDATA[mvdhr]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>12</field_order>
+			<form_id>4</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"0","label":"none","classes":"form-section","repeat":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>84</id>
+			<field_key><![CDATA[7sglw]]></field_key>
+			<name><![CDATA[Relatie tot contactpersoon]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[text]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>14</field_order>
+			<form_id>4</form_id>
+			<required>1</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"use_global_currency":"1","in_section":"41","invalid":"[field_name] is ongeldig"}]]></field_options>
+		</field>
+		<field>
+			<id>43</id>
+			<field_key><![CDATA[zrz27]]></field_key>
+			<name><![CDATA[Is deze persoon een wettelijke vertegenwoordiger?]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[radio]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>16</field_order>
+			<form_id>4</form_id>
+			<required>0</required>
+			<options><![CDATA[[{"label":"Ja","value":"Ja","image":"0"},{"label":"Nee","value":"Nee","image":"0"}]]]></options>
+			<field_options><![CDATA[{"align":"inline","admin_only":[""],"other":"0","in_section":"41","invalid":"[field_name] is invalid","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>44</id>
+			<field_key><![CDATA[cluka]]></field_key>
+			<name><![CDATA[Is er sprake van bewindvoering of curatele?]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[radio]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>18</field_order>
+			<form_id>4</form_id>
+			<required>0</required>
+			<options><![CDATA[[{"label":"Ja","value":"Ja","image":"0"},{"label":"Nee","value":"Nee","image":"0"}]]]></options>
+			<field_options><![CDATA[{"align":"inline","show_hide":"hide","hide_field":["43"],"hide_field_cond":["!="],"hide_opt":["Ja"],"admin_only":[""],"other":"0","in_section":"41","invalid":"[field_name] is invalid","classes":"field-conditional","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>45</id>
+			<field_key><![CDATA[7t6qu]]></field_key>
+			<name><![CDATA[Met wie kunnen wij contact opnemen over de afhandeling van het abonnement?]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[select]]></type>
+			<default_value><![CDATA[Abonnee]]></default_value>
+			<field_order>20</field_order>
+			<form_id>4</form_id>
+			<required>0</required>
+			<options><![CDATA[[{"label":"Abonnee","value":"Abonnee"},{"label":"Contactpersoon","value":"Contactpersoon"}]]]></options>
+			<field_options><![CDATA[{"show_hide":"hide","hide_field":["44"],"hide_field_cond":["!="],"hide_opt":["Ja"],"admin_only":[""],"other":"0","in_section":"41","invalid":"[field_name] is invalid","classes":"field-conditional"}]]></field_options>
+		</field>
+		<field>
+			<id>42</id>
+			<field_key><![CDATA[npa2]]></field_key>
+			<name><![CDATA[Section Buttons]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[end_divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>21</field_order>
+			<form_id>4</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>83</id>
+			<field_key><![CDATA[9nqhi]]></field_key>
+			<name><![CDATA[Tekst]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[text]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>23</field_order>
+			<form_id>4</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"use_global_currency":"1","in_section":"41","invalid":"[field_name] is ongeldig"}]]></field_options>
+		</field>
+		<field>
+			<id>32</id>
+			<field_key><![CDATA[submit2]]></field_key>
+			<name><![CDATA[Submit]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[submit]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>10031</field_order>
+			<form_id>4</form_id>
+			<required>0</required>
+			<options><![CDATA[[]]]></options>
+			<field_options><![CDATA[{"in_section":"0","classes":"frm12 frm_first"}]]></field_options>
+		</field>
+	</form>
+	<form>
+		<id>5</id>
+		<form_key><![CDATA[checkout-alarmopvolgers]]></form_key>
+		<name><![CDATA[Alarmopvolgers]]></name>
+		<description><![CDATA[]]></description>
+		<created_at>2025-11-26 13:59:49</created_at>
+		<logged_in>0</logged_in>
+		<is_template>0</is_template>
+		<editable>0</editable>
+		<options><![CDATA[{"on_submit_migrated":"1","antispam":"1","custom_style":"1","submit_conditions":{"show_hide":"show","any_all":"all","hide_field_cond":["=="]},"logged_in_role":[""],"single_entry_type":["user"],"cookie_expiration":"720","protect_files":"0","noindex_files":"0","editable_role":[""],"edit_draft_role":[""],"open_date":"2025-11-26 13:59","before_html":"<legend class=\\\"frm_screen_reader\\\">[form_name]<\/legend>\r\n[if form_name]<h3 class=\\\"frm_form_title\\\">[form_name]<\/h3>[\/if form_name]\r\n[if form_description]<div class=\\\"frm_description\\\">[form_description]<\/div>[\/if form_description]","submit_html":"<div class=\\\"frm_submit frm_flex\\\">\r\n<button class=\\\"frm_button_submit\\\" type=\\\"submit\\\"  [button_action]>[button_label]<\/button>\r\n[if back_button]<button type=\\\"submit\\\" name=\\\"frm_prev_page\\\" formnovalidate=\\\"formnovalidate\\\" class=\\\"frm_prev_page\\\" [back_hook]>[back_label]<\/button>[\/if back_button]\r\n[if save_draft]<button class=\\\"frm_save_draft\\\" [draft_hook]>[draft_label]<\/button>[\/if save_draft]\r\n[if start_over]<a href=\\\"#\\\" tabindex=\\\"0\\\" class=\\\"frm_start_over\\\" [start_over_hook]>[start_over_label]<\/a>[\/if start_over]\r\n<\/div>","show_form":false}]]></options>
+		<status><![CDATA[published]]></status>
+		<parent_form_id>0</parent_form_id>
+		<field>
+			<id>47</id>
+			<field_key><![CDATA[mlb61]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>2</field_order>
+			<form_id>5</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"0","label":"none","classes":"form-section","repeat":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>49</id>
+			<field_key><![CDATA[wm6yq]]></field_key>
+			<name><![CDATA[Is de contactpersoon tevens alarmopvolger?]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[radio]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>4</field_order>
+			<form_id>5</form_id>
+			<required>1</required>
+			<options><![CDATA[[{"label":"Ja","value":"Ja","image":"Option 1","src":false},{"label":"Nee","value":"Nee","image":"Option 2","src":false}]]]></options>
+			<field_options><![CDATA[{"align":"inline","admin_only":[""],"other":"0","in_section":"47","invalid":"[field_name] is invalid","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<div  id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/div>\r\n\t<div class=\\\"frm_opt_container\\\" aria-labelledby=\\\"field_[key]_label\\\" role=\\\"group\\\">[input]<\/div>\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>50</id>
+			<field_key><![CDATA[29ib6]]></field_key>
+			<name><![CDATA[Aanhef]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[radio]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>6</field_order>
+			<form_id>5</form_id>
+			<required>1</required>
+			<options><![CDATA[[{"label":"De heer","value":"De heer","image":"Option 1","src":false},{"label":"Mevrouw","value":"Mevrouw","image":"Option 2","src":false}]]]></options>
+			<field_options><![CDATA[{"align":"inline","admin_only":[""],"other":"0","in_section":"47","invalid":"[field_name] is invalid","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<div  id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/div>\r\n\t<div class=\\\"frm_opt_container\\\" aria-labelledby=\\\"field_[key]_label\\\" role=\\\"group\\\">[input]<\/div>\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>51</id>
+			<field_key><![CDATA[nwipl]]></field_key>
+			<name><![CDATA[Naam]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[name]]></type>
+			<default_value><![CDATA[{"first":"","middle":"","last":""}]]></default_value>
+			<field_order>8</field_order>
+			<form_id>5</form_id>
+			<required>1</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"47","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<div  id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/div>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","placeholder":{"first":"","middle":"","last":""},"first_desc":"Voorletters","middle_desc":"Tussenvoegsel","last_desc":"Achternaam","name_layout":"first_middle_last"}]]></field_options>
+		</field>
+		<field>
+			<id>52</id>
+			<field_key><![CDATA[os7by]]></field_key>
+			<name><![CDATA[Telefoonnummer]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[phone]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>10</field_order>
+			<form_id>5</form_id>
+			<required>1</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"47","invalid":"[field_name] is invalid","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<label for=\\\"field_[key]\\\" id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/label>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","format":"international"}]]></field_options>
+		</field>
+		<field>
+			<id>48</id>
+			<field_key><![CDATA[rrfu9]]></field_key>
+			<name><![CDATA[Section Buttons]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[end_divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>11</field_order>
+			<form_id>5</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>46</id>
+			<field_key><![CDATA[submit3]]></field_key>
+			<name><![CDATA[Submit]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[submit]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>10011</field_order>
+			<form_id>5</form_id>
+			<required>0</required>
+			<options><![CDATA[[]]]></options>
+			<field_options><![CDATA[{"in_section":"0","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t[input]\r\n<\/div>"}]]></field_options>
+		</field>
+	</form>
+	<form>
+		<id>6</id>
+		<form_key><![CDATA[checkout-verpleegkundige-opvolging]]></form_key>
+		<name><![CDATA[Verpleegkundige opvolging]]></name>
+		<description><![CDATA[]]></description>
+		<created_at>2025-11-26 14:12:25</created_at>
+		<logged_in>0</logged_in>
+		<is_template>0</is_template>
+		<editable>0</editable>
+		<options><![CDATA[{"on_submit_migrated":"1","antispam":"1","custom_style":"1","submit_conditions":{"show_hide":"show","any_all":"all","hide_field":[],"hide_field_cond":["=="],"hide_opt":[]},"logged_in_role":[""],"single_entry_type":["user"],"cookie_expiration":"720","protect_files":"0","noindex_files":"0","editable_role":[""],"edit_draft_role":[""],"open_date":"2025-11-26 14:12","before_html":"<legend class=\"frm_screen_reader\">[form_name]<\/legend>\r\n[if form_name]<h3 class=\"frm_form_title\">[form_name]<\/h3>[\/if form_name]\r\n[if form_description]<div class=\"frm_description\">[form_description]<\/div>[\/if form_description]","submit_html":"<div class=\"frm_submit frm_flex\">\r\n<button class=\"frm_button_submit\" type=\"submit\"  [button_action]>[button_label]<\/button>\r\n[if back_button]<button type=\"submit\" name=\"frm_prev_page\" formnovalidate=\"formnovalidate\" class=\"frm_prev_page\" [back_hook]>[back_label]<\/button>[\/if back_button]\r\n[if save_draft]<button class=\"frm_save_draft\" [draft_hook]>[draft_label]<\/button>[\/if save_draft]\r\n[if start_over]<a href=\"#\" tabindex=\"0\" class=\"frm_start_over\" [start_over_hook]>[start_over_label]<\/a>[\/if start_over]\r\n<\/div>","show_form":false}]]></options>
+		<status><![CDATA[published]]></status>
+		<parent_form_id>0</parent_form_id>
+		<field>
+			<id>54</id>
+			<field_key><![CDATA[s6k1m]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>2</field_order>
+			<form_id>6</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"0","label":"none","classes":"form-section","repeat":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>90</id>
+			<field_key><![CDATA[r48m7]]></field_key>
+			<name><![CDATA[Inzien en delen medische gegevens]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[textarea]]></type>
+			<default_value><![CDATA[Door middel van onderstaande akkoordverklaring geeft u (de verpleegkundigen) van Spoedteam Enea  toestemming om interventies naar aanleiding van een alarmoproep, te rapporteren aan huisarts of HAP, medisch specialist en/of informatie hierover te delen met andere (betrokken) hulpverleners. 
+
+Het delen van informatie gebeurt met inachtneming van de Wet Bescherming Persoonsgegevens en overige relevante wet- en regelgeving.]]></default_value>
+			<field_order>4</field_order>
+			<form_id>6</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"read_only":"1","admin_only":[""],"use_global_currency":"1","in_section":"54","max_limit":"0","invalid":"[field_name] is ongeldig"}]]></field_options>
+		</field>
+		<field>
+			<id>57</id>
+			<field_key><![CDATA[bhw8o]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[checkbox]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>6</field_order>
+			<form_id>6</form_id>
+			<required>0</required>
+			<options><![CDATA[[{"label":"Akkoordverklaring inzage\/delen medische gegevens","value":"Akkoordverklaring inzage\/delen medische gegevens","image":"0"}]]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"other":"0","in_section":"54","label":"none","invalid":"[field_name] is invalid","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>55</id>
+			<field_key><![CDATA[na1kt]]></field_key>
+			<name><![CDATA[Section Buttons]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[end_divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>7</field_order>
+			<form_id>6</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>53</id>
+			<field_key><![CDATA[submit4]]></field_key>
+			<name><![CDATA[Submit]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[submit]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>10009</field_order>
+			<form_id>6</form_id>
+			<required>0</required>
+			<options><![CDATA[[]]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+	</form>
+	<form>
+		<id>7</id>
+		<form_key><![CDATA[checkout-woningtoegang]]></form_key>
+		<name><![CDATA[Woningtoegang]]></name>
+		<description><![CDATA[]]></description>
+		<created_at>2025-11-26 14:16:40</created_at>
+		<logged_in>0</logged_in>
+		<is_template>0</is_template>
+		<editable>0</editable>
+		<options><![CDATA[{"on_submit_migrated":"1","antispam":"1","custom_style":"1","submit_conditions":{"show_hide":"show","any_all":"all","hide_field_cond":["=="]},"logged_in_role":[""],"single_entry_type":["user"],"cookie_expiration":"720","protect_files":"0","noindex_files":"0","editable_role":[""],"edit_draft_role":[""],"open_date":"2025-11-26 14:16","before_html":"<legend class=\\\"frm_screen_reader\\\">[form_name]<\/legend>\r\n[if form_name]<h3 class=\\\"frm_form_title\\\">[form_name]<\/h3>[\/if form_name]\r\n[if form_description]<div class=\\\"frm_description\\\">[form_description]<\/div>[\/if form_description]","submit_html":"<div class=\\\"frm_submit frm_flex\\\">\r\n<button class=\\\"frm_button_submit\\\" type=\\\"submit\\\"  [button_action]>[button_label]<\/button>\r\n[if back_button]<button type=\\\"submit\\\" name=\\\"frm_prev_page\\\" formnovalidate=\\\"formnovalidate\\\" class=\\\"frm_prev_page\\\" [back_hook]>[back_label]<\/button>[\/if back_button]\r\n[if save_draft]<button class=\\\"frm_save_draft\\\" [draft_hook]>[draft_label]<\/button>[\/if save_draft]\r\n[if start_over]<a href=\\\"#\\\" tabindex=\\\"0\\\" class=\\\"frm_start_over\\\" [start_over_hook]>[start_over_label]<\/a>[\/if start_over]\r\n<\/div>","show_form":false}]]></options>
+		<status><![CDATA[published]]></status>
+		<parent_form_id>0</parent_form_id>
+		<field>
+			<id>59</id>
+			<field_key><![CDATA[f4jr4]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>2</field_order>
+			<form_id>7</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"0","label":"none","classes":"form-section","repeat":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>61</id>
+			<field_key><![CDATA[d6kg7]]></field_key>
+			<name><![CDATA[Woont u in een complex met centrale toegangsdeur?]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[radio]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>4</field_order>
+			<form_id>7</form_id>
+			<required>1</required>
+			<options><![CDATA[[{"label":"Ja","value":"Ja","image":"Option 1","src":false},{"label":"Nee","value":"Nee","image":"Option 2","src":false}]]]></options>
+			<field_options><![CDATA[{"align":"inline","admin_only":[""],"other":"0","in_section":"59","invalid":"[field_name] is invalid","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<div  id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/div>\r\n\t<div class=\\\"frm_opt_container\\\" aria-labelledby=\\\"field_[key]_label\\\" role=\\\"group\\\">[input]<\/div>\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>62</id>
+			<field_key><![CDATA[kul5l]]></field_key>
+			<name><![CDATA[Heeft u toestemming vande gebouweigenaar, woningbouwvereniging of VvE voor het plaatsen van een sleutelkluis?]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[radio]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>6</field_order>
+			<form_id>7</form_id>
+			<required>1</required>
+			<options><![CDATA[[{"label":"Ja","value":"Ja","image":"Option 1","src":false},{"label":"Nee","value":"Nee","image":"Option 2","src":false}]]]></options>
+			<field_options><![CDATA[{"align":"inline","admin_only":[""],"other":"0","in_section":"59","invalid":"[field_name] is invalid","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<div  id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/div>\r\n\t<div class=\\\"frm_opt_container\\\" aria-labelledby=\\\"field_[key]_label\\\" role=\\\"group\\\">[input]<\/div>\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>63</id>
+			<field_key><![CDATA[ysk43]]></field_key>
+			<name><![CDATA[Ontvangt u momenteel thuiszorg van een thuiszorgorganisatie?]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[radio]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>8</field_order>
+			<form_id>7</form_id>
+			<required>1</required>
+			<options><![CDATA[[{"label":"Ja","value":"Ja","image":"Option 1","src":false},{"label":"Nee","value":"Nee","image":"Option 2","src":false}]]]></options>
+			<field_options><![CDATA[{"align":"inline","admin_only":[""],"other":"0","in_section":"59","invalid":"[field_name] is invalid","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<div  id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/div>\r\n\t<div class=\\\"frm_opt_container\\\" aria-labelledby=\\\"field_[key]_label\\\" role=\\\"group\\\">[input]<\/div>\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>64</id>
+			<field_key><![CDATA[15g4p]]></field_key>
+			<name><![CDATA[Van wie ontvangt u thuiszorg?]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[text]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>10</field_order>
+			<form_id>7</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"show_hide":"hide","hide_field":["63"],"hide_field_cond":["!="],"hide_opt":["Ja"],"admin_only":[""],"use_global_currency":"0","in_section":"59","invalid":"[field_name] is invalid","classes":"field-conditional"}]]></field_options>
+		</field>
+		<field>
+			<id>65</id>
+			<field_key><![CDATA[d6xpj]]></field_key>
+			<name><![CDATA[Wilt u de thuiszorg (indien mogelijk) ook gebruik laten maken van uw sleutelkluis?]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[radio]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>12</field_order>
+			<form_id>7</form_id>
+			<required>0</required>
+			<options><![CDATA[[{"label":"Ja","value":"Ja","image":"0"},{"label":"Nee","value":"Nee","image":"0"}]]]></options>
+			<field_options><![CDATA[{"align":"inline","show_hide":"hide","hide_field":["62"],"hide_field_cond":["!="],"hide_opt":["Ja"],"admin_only":[""],"other":"0","in_section":"59","invalid":"[field_name] is invalid","classes":"field-conditional","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>60</id>
+			<field_key><![CDATA[mc7xv]]></field_key>
+			<name><![CDATA[Section Buttons]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[end_divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>13</field_order>
+			<form_id>7</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>58</id>
+			<field_key><![CDATA[submit5]]></field_key>
+			<name><![CDATA[Submit]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[submit]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>10013</field_order>
+			<form_id>7</form_id>
+			<required>0</required>
+			<options><![CDATA[[]]]></options>
+			<field_options><![CDATA[{"in_section":"0","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t[input]\r\n<\/div>"}]]></field_options>
+		</field>
+	</form>
+	<form>
+		<id>10</id>
+		<form_key><![CDATA[checkout-aanvullende-informatie]]></form_key>
+		<name><![CDATA[Aanvullende informatie]]></name>
+		<description><![CDATA[]]></description>
+		<created_at>2025-12-17 14:02:42</created_at>
+		<logged_in>0</logged_in>
+		<is_template>0</is_template>
+		<editable>0</editable>
+		<options><![CDATA[{"on_submit_migrated":"1","antispam":"1","custom_style":"1","submit_conditions":{"show_hide":"show","any_all":"all","hide_field":[],"hide_field_cond":["=="],"hide_opt":[]},"logged_in_role":[""],"single_entry_type":["user"],"cookie_expiration":"720","protect_files":"0","noindex_files":"0","editable_role":[""],"edit_draft_role":[""],"open_date":"2025-12-17 14:02","before_html":"<legend class=\"frm_screen_reader\">[form_name]<\/legend>\r\n[if form_name]<h3 class=\"frm_form_title\">[form_name]<\/h3>[\/if form_name]\r\n[if form_description]<div class=\"frm_description\">[form_description]<\/div>[\/if form_description]","submit_html":"<div class=\"frm_submit frm_flex\">\r\n<button class=\"frm_button_submit\" type=\"submit\"  [button_action]>[button_label]<\/button>\r\n[if back_button]<button type=\"submit\" name=\"frm_prev_page\" formnovalidate=\"formnovalidate\" class=\"frm_prev_page\" [back_hook]>[back_label]<\/button>[\/if back_button]\r\n[if save_draft]<button class=\"frm_save_draft\" [draft_hook]>[draft_label]<\/button>[\/if save_draft]\r\n[if start_over]<a href=\"#\" tabindex=\"0\" class=\"frm_start_over\" [start_over_hook]>[start_over_label]<\/a>[\/if start_over]\r\n<\/div>","show_form":false}]]></options>
+		<status><![CDATA[published]]></status>
+		<parent_form_id>0</parent_form_id>
+		<field>
+			<id>76</id>
+			<field_key><![CDATA[bsjni]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>2</field_order>
+			<form_id>10</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"0","label":"none","classes":"form-section frm12 frm_first","repeat":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>80</id>
+			<field_key><![CDATA[2ux5r]]></field_key>
+			<name><![CDATA[Opmerkingen]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[text]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>4</field_order>
+			<form_id>10</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"use_global_currency":"0","in_section":"76","invalid":"[field_name] is invalid","classes":"frm12 frm_first","placeholder":"Vul hier in wat belangrijk is voor ons om te weten"}]]></field_options>
+		</field>
+		<field>
+			<id>78</id>
+			<field_key><![CDATA[v29yb]]></field_key>
+			<name><![CDATA[Bankrekeningnummer]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[number]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>6</field_order>
+			<form_id>10</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"use_global_currency":"0","in_section":"76","invalid":"[field_name] is invalid","classes":"frm12 frm_first","minnum":"0","maxnum":"9999999"}]]></field_options>
+		</field>
+		<field>
+			<id>79</id>
+			<field_key><![CDATA[g0rt2]]></field_key>
+			<name><![CDATA[Automatische incasso]]></name>
+			<description><![CDATA[Door middel van deze akkoordverklaring machtig ik Spoedteam Enea om de de verschuldigde maandelijkse abonnementsgelden en, in voorkomende gevallen eenmalig
+gemaakte kosten, van bovengenoemde bankrekening af te schrijven. Op de verwerking van de machtiging is SEPA wet- en regelgeving van
+toepassing.]]></description>
+			<type><![CDATA[checkbox]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>8</field_order>
+			<form_id>10</form_id>
+			<required>0</required>
+			<options><![CDATA[[{"label":"Akkoordverklaring automatische incasso","value":"Akkoordverklaring automatische incasso","image":"0"}]]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"other":"0","in_section":"76","label":"none","invalid":"[field_name] is invalid","classes":"frm12 frm_first","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>94</id>
+			<field_key><![CDATA[352vg]]></field_key>
+			<name><![CDATA[Door bevestiging van de aanvraag verklaart ondergetekende:]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[textarea]]></type>
+			<default_value><![CDATA[- Aanvrager is door aanbieder voldoende geïnformeerd over het gekozen abonnement en acht dit passend voor de persoonlijke situatie en beoogde doelstellingen.
+- Aanvrager heeft dit formulier volledig en naar waarheid ingevuld.
+- Aanvrager zal Spoedteam Enea zo spoedig mogelijk op de hoogtebrengen van wijzigingen in de verstrekte gegevens.
+- Aanvrager heeft kennis genomen van de algemene leveringsvoorwaarden en gaat hiermee akkoord.
+- Aanvrager stemt in met verwerking van zijn/haar gegevens (conform AVG) in systemen van aanbieder ten behoeve van de dienstverlening.]]></default_value>
+			<field_order>10</field_order>
+			<form_id>10</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"read_only":"1","admin_only":[""],"use_global_currency":"1","in_section":"76","max_limit":"0","invalid":"[field_name] is ongeldig"}]]></field_options>
+		</field>
+		<field>
+			<id>81</id>
+			<field_key><![CDATA[uxnah]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[checkbox]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>12</field_order>
+			<form_id>10</form_id>
+			<required>1</required>
+			<options><![CDATA[[{"label":"Akkoordverklaring Algemene Leveringsvoorwaarden","value":"Akkoordverklaring Algemene Leveringsvoorwaarden","image":"0"}]]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"other":"0","in_section":"76","label":"none","invalid":"[field_name] is invalid","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>82</id>
+			<field_key><![CDATA[jv432]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[checkbox]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>14</field_order>
+			<form_id>10</form_id>
+			<required>1</required>
+			<options><![CDATA[[{"label":"Akkoordverklaring Gegegvensverwerking en Privacystatement","value":"Akkoordverklaring Gegegvensverwerking en Privacystatement","image":"0"}]]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"other":"0","in_section":"76","label":"none","invalid":"[field_name] is invalid","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>77</id>
+			<field_key><![CDATA[msm25]]></field_key>
+			<name><![CDATA[Section Buttons]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[end_divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>15</field_order>
+			<form_id>10</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>74</id>
+			<field_key><![CDATA[submit7]]></field_key>
+			<name><![CDATA[Submit]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[submit]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>17</field_order>
+			<form_id>10</form_id>
+			<required>0</required>
+			<options><![CDATA[[]]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+	</form>
+	<form>
+		<id>11</id>
+		<form_key><![CDATA[checkout-alarm-via-verzekering]]></form_key>
+		<name><![CDATA[Alarm via verzekering]]></name>
+		<description><![CDATA[]]></description>
+		<created_at>2026-02-05 09:10:25</created_at>
+		<logged_in>0</logged_in>
+		<is_template>0</is_template>
+		<editable>0</editable>
+		<options><![CDATA[{"on_submit_migrated":"1","antispam":"1","custom_style":"1","submit_conditions":{"show_hide":"show","any_all":"all","hide_field":[],"hide_field_cond":["=="],"hide_opt":[]},"logged_in_role":[""],"single_entry_type":["user"],"cookie_expiration":"720","protect_files":"0","noindex_files":"0","editable_role":[""],"edit_draft_role":[""],"open_date":"2025-11-26 14:12","before_html":"<legend class=\"frm_screen_reader\">[form_name]<\/legend>\r\n[if form_name]<h3 class=\"frm_form_title\">[form_name]<\/h3>[\/if form_name]\r\n[if form_description]<div class=\"frm_description\">[form_description]<\/div>[\/if form_description]","submit_html":"<div class=\"frm_submit frm_flex\">\r\n<button class=\"frm_button_submit\" type=\"submit\"  [button_action]>[button_label]<\/button>\r\n[if back_button]<button type=\"submit\" name=\"frm_prev_page\" formnovalidate=\"formnovalidate\" class=\"frm_prev_page\" [back_hook]>[back_label]<\/button>[\/if back_button]\r\n[if save_draft]<button class=\"frm_save_draft\" [draft_hook]>[draft_label]<\/button>[\/if save_draft]\r\n[if start_over]<a href=\"#\" tabindex=\"0\" class=\"frm_start_over\" [start_over_hook]>[start_over_label]<\/a>[\/if start_over]\r\n<\/div>","show_form":false}]]></options>
+		<status><![CDATA[published]]></status>
+		<parent_form_id>0</parent_form_id>
+		<field>
+			<id>85</id>
+			<field_key><![CDATA[s6k1m2]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>2</field_order>
+			<form_id>11</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"in_section":"0","label":"none","classes":"form-section","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field frm_section_heading form-field[error_class]\\\">\r\n<h3 class=\\\"frm_pos_[label_position][collapse_class]\\\">[field_name]<\/h3>\r\n[if description]<div class=\\\"frm_description\\\">[description]<\/div>[\/if description]\r\n[collapse_this]\r\n<\/div>","repeat":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>86</id>
+			<field_key><![CDATA[ppiky2]]></field_key>
+			<name><![CDATA[Via welke leverancier heeft u uw alarmapparaat ontvangen/aangevraagd?]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[select]]></type>
+			<default_value><![CDATA[CSI]]></default_value>
+			<field_order>4</field_order>
+			<form_id>11</form_id>
+			<required>1</required>
+			<options><![CDATA[[{"label":"CSI","value":"CSI"},{"label":"Eurocross","value":"Eurocross"},{"label":"M-Alert","value":"M-Alert"},{"label":"Mobile Care","value":"Mobile Care"}]]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"other":"0","in_section":"85","invalid":"[field_name] is invalid","custom_html":"<div id=\\\"frm_field_[id]_container\\\" class=\\\"frm_form_field form-field [required_class][error_class]\\\">\r\n\t<label for=\\\"field_[key]\\\" id=\\\"field_[key]_label\\\" class=\\\"frm_primary_label\\\">[field_name]\r\n\t\t<span class=\\\"frm_required\\\" aria-hidden=\\\"true\\\">[required_label]<\/span>\r\n\t<\/label>\r\n\t[input]\r\n\t[if description]<div class=\\\"frm_description\\\" id=\\\"frm_desc_field_[key]\\\">[description]<\/div>[\/if description]\r\n\t[if error]<div class=\\\"frm_error\\\" role=\\\"alert\\\" id=\\\"frm_error_field_[key]\\\">[error]<\/div>[\/if error]\r\n<\/div>"}]]></field_options>
+		</field>
+		<field>
+			<id>95</id>
+			<field_key><![CDATA[u987p]]></field_key>
+			<name><![CDATA[Inzien en delen medische gegevens]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[textarea]]></type>
+			<default_value><![CDATA[Door middel van onderstaande akkoordverklaring geef ik (de verpleegkundigen) van Spoedteam Enea  toestemming om interventies naar aanleiding van een alarmoproep, te rapporteren aan huisarts of HAP, medisch specialist en/of informatie hierover te delen met andere (betrokken) hulpverleners. 
+
+Het delen van informatie gebeurt met inachtneming van de Wet Bescherming Persoonsgegevens en overige relevante wet- en regelgeving.]]></default_value>
+			<field_order>6</field_order>
+			<form_id>11</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"read_only":"1","admin_only":[""],"use_global_currency":"1","in_section":"85","max_limit":"0","invalid":"[field_name] is ongeldig"}]]></field_options>
+		</field>
+		<field>
+			<id>87</id>
+			<field_key><![CDATA[bhw8o2]]></field_key>
+			<name><![CDATA[]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[checkbox]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>8</field_order>
+			<form_id>11</form_id>
+			<required>0</required>
+			<options><![CDATA[[{"label":"Akkoordverklaring inzage\/delen medische gegevens","value":"Akkoordverklaring inzage\/delen medische gegevens","image":"0"}]]]></options>
+			<field_options><![CDATA[{"admin_only":[""],"other":"0","in_section":"85","label":"none","invalid":"[field_name] is invalid","image_options":"0","image_size":"small"}]]></field_options>
+		</field>
+		<field>
+			<id>88</id>
+			<field_key><![CDATA[na1kt2]]></field_key>
+			<name><![CDATA[Section Buttons]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[end_divider]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>9</field_order>
+			<form_id>11</form_id>
+			<required>0</required>
+			<options><![CDATA[]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+		<field>
+			<id>89</id>
+			<field_key><![CDATA[submit42]]></field_key>
+			<name><![CDATA[Submit]]></name>
+			<description><![CDATA[]]></description>
+			<type><![CDATA[submit]]></type>
+			<default_value><![CDATA[]]></default_value>
+			<field_order>10009</field_order>
+			<form_id>11</form_id>
+			<required>0</required>
+			<options><![CDATA[[]]]></options>
+			<field_options><![CDATA[{"in_section":"0"}]]></field_options>
+		</field>
+	</form>
+	<view>
+		<title>Confirmation</title>
+		<link></link>
+		<post_author><![CDATA[tirta]]></post_author>
+		<description></description>
+		<content><![CDATA[{"success_action":"message","success_msg":"Your responses were successfully submitted. Thank you!","show_form":"","success_url":"","success_page_id":"","open_in_new_tab":"","redirect_delay":"","redirect_delay_time":8,"redirect_delay_msg":"Please wait while you are redirected.","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[on_submit]]></excerpt>
+		<post_id>1276</post_id>
+		<post_date>2025-11-26 08:50:50</post_date>
+		<post_date_gmt>2025-11-26 08:50:50</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>3_on_submit_</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>3</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Send Email</title>
+		<link></link>
+		<post_author><![CDATA[tirta]]></post_author>
+		<description></description>
+		<content><![CDATA[{"email_to":"[default-email]","cc":"","bcc":"","from":"[sitename] <[default-from-email]>","reply_to":"","email_subject":"","email_message":"[default-message]","inc_user_info":0,"plain_text":0,"email_style":"","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[email]]></excerpt>
+		<post_id>1277</post_id>
+		<post_date>2025-11-26 08:50:50</post_date>
+		<post_date_gmt>2025-11-26 08:50:50</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>3_email_</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>3</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Confirmation</title>
+		<link></link>
+		<post_author><![CDATA[exy]]></post_author>
+		<description></description>
+		<content><![CDATA[{"success_action":"message","success_msg":"Your responses were successfully submitted. Thank you!","show_form":"","success_url":"","success_page_id":"","open_in_new_tab":"","redirect_delay":"","redirect_delay_time":8,"redirect_delay_msg":"Please wait while you are redirected.","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[on_submit]]></excerpt>
+		<post_id>1312</post_id>
+		<post_date>2025-11-26 13:48:19</post_date>
+		<post_date_gmt>2025-11-26 13:48:19</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>4_on_submit_</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>4</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Send Email</title>
+		<link></link>
+		<post_author><![CDATA[exy]]></post_author>
+		<description></description>
+		<content><![CDATA[{"email_to":"[default-email]","cc":"","bcc":"","from":"[sitename] <[default-from-email]>","reply_to":"","email_subject":"","email_message":"[default-message]","inc_user_info":0,"plain_text":0,"email_style":"","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[email]]></excerpt>
+		<post_id>1313</post_id>
+		<post_date>2025-11-26 13:48:19</post_date>
+		<post_date_gmt>2025-11-26 13:48:19</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>4_email_</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>4</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Confirmation</title>
+		<link></link>
+		<post_author><![CDATA[exy]]></post_author>
+		<description></description>
+		<content><![CDATA[{"success_action":"message","success_msg":"Your responses were successfully submitted. Thank you!","show_form":"","success_url":"","success_page_id":"","open_in_new_tab":"","redirect_delay":"","redirect_delay_time":8,"redirect_delay_msg":"Please wait while you are redirected.","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[on_submit]]></excerpt>
+		<post_id>1314</post_id>
+		<post_date>2025-11-26 13:59:49</post_date>
+		<post_date_gmt>2025-11-26 13:59:49</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>5_on_submit_</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>5</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Send Email</title>
+		<link></link>
+		<post_author><![CDATA[exy]]></post_author>
+		<description></description>
+		<content><![CDATA[{"email_to":"[default-email]","cc":"","bcc":"","from":"[sitename] <[default-from-email]>","reply_to":"","email_subject":"","email_message":"[default-message]","inc_user_info":0,"plain_text":0,"email_style":"","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[email]]></excerpt>
+		<post_id>1315</post_id>
+		<post_date>2025-11-26 13:59:49</post_date>
+		<post_date_gmt>2025-11-26 13:59:49</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>5_email_</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>5</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Confirmation</title>
+		<link></link>
+		<post_author><![CDATA[exy]]></post_author>
+		<description></description>
+		<content><![CDATA[{"success_action":"message","success_msg":"Your responses were successfully submitted. Thank you!","show_form":"","success_url":"","success_page_id":"","open_in_new_tab":"","redirect_delay":"","redirect_delay_time":8,"redirect_delay_msg":"Please wait while you are redirected.","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[on_submit]]></excerpt>
+		<post_id>1316</post_id>
+		<post_date>2025-11-26 14:12:25</post_date>
+		<post_date_gmt>2025-11-26 14:12:25</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>6_on_submit_</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>6</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Send Email</title>
+		<link></link>
+		<post_author><![CDATA[exy]]></post_author>
+		<description></description>
+		<content><![CDATA[{"email_to":"[default-email]","cc":"","bcc":"","from":"[sitename] <[default-from-email]>","reply_to":"","email_subject":"","email_message":"[default-message]","inc_user_info":0,"plain_text":0,"email_style":"","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[email]]></excerpt>
+		<post_id>1317</post_id>
+		<post_date>2025-11-26 14:12:25</post_date>
+		<post_date_gmt>2025-11-26 14:12:25</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>6_email_</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>6</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Confirmation</title>
+		<link></link>
+		<post_author><![CDATA[exy]]></post_author>
+		<description></description>
+		<content><![CDATA[{"success_action":"message","success_msg":"Your responses were successfully submitted. Thank you!","show_form":"","success_url":"","success_page_id":"","open_in_new_tab":"","redirect_delay":"","redirect_delay_time":8,"redirect_delay_msg":"Please wait while you are redirected.","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[on_submit]]></excerpt>
+		<post_id>1318</post_id>
+		<post_date>2025-11-26 14:16:40</post_date>
+		<post_date_gmt>2025-11-26 14:16:40</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>7_on_submit_</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>7</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Send Email</title>
+		<link></link>
+		<post_author><![CDATA[exy]]></post_author>
+		<description></description>
+		<content><![CDATA[{"email_to":"[default-email]","cc":"","bcc":"","from":"[sitename] <[default-from-email]>","reply_to":"","email_subject":"","email_message":"[default-message]","inc_user_info":0,"plain_text":0,"email_style":"","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[email]]></excerpt>
+		<post_id>1319</post_id>
+		<post_date>2025-11-26 14:16:40</post_date>
+		<post_date_gmt>2025-11-26 14:16:40</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>7_email_</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>7</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Confirmation</title>
+		<link></link>
+		<post_author><![CDATA[exy]]></post_author>
+		<description></description>
+		<content><![CDATA[{"success_action":"message","success_msg":"Your responses were successfully submitted. Thank you!","show_form":"","success_url":"","success_page_id":"","open_in_new_tab":"","redirect_delay":"","redirect_delay_time":8,"redirect_delay_msg":"Please wait while you are redirected.","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[on_submit]]></excerpt>
+		<post_id>1847</post_id>
+		<post_date>2025-12-17 14:02:43</post_date>
+		<post_date_gmt>2025-12-17 14:02:43</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>10_on_submit_</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>10</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Send Email</title>
+		<link></link>
+		<post_author><![CDATA[exy]]></post_author>
+		<description></description>
+		<content><![CDATA[{"email_to":"[default-email]","cc":"","bcc":"","from":"[sitename] <[default-from-email]>","reply_to":"","email_subject":"","email_message":"[default-message]","inc_user_info":0,"plain_text":0,"email_style":"","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[email]]></excerpt>
+		<post_id>1848</post_id>
+		<post_date>2025-12-17 14:02:43</post_date>
+		<post_date_gmt>2025-12-17 14:02:43</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>10_email_</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>10</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Confirmation</title>
+		<link></link>
+		<post_author><![CDATA[exy]]></post_author>
+		<description></description>
+		<content><![CDATA[{"success_action":"message","success_msg":"Your responses were successfully submitted. Thank you!","show_form":"","success_url":"","success_page_id":"","open_in_new_tab":"","redirect_delay":"","redirect_delay_time":"8","redirect_delay_msg":"Please wait while you are redirected.","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[on_submit]]></excerpt>
+		<post_id>3172</post_id>
+		<post_date>2025-11-26 14:12:25</post_date>
+		<post_date_gmt>2025-11-26 14:12:25</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>6_on_submit_-2</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>11</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+	<view>
+		<title>Send Email</title>
+		<link></link>
+		<post_author><![CDATA[exy]]></post_author>
+		<description></description>
+		<content><![CDATA[{"email_to":"[default-email]","cc":"","bcc":"","from":"[sitename] <[default-from-email]>","reply_to":"","email_subject":"","email_message":"[default-message]","inc_user_info":"0","plain_text":"0","email_style":"","event":["create"],"conditions":{"send_stop":"","any_all":""}}]]></content>
+		<excerpt><![CDATA[email]]></excerpt>
+		<post_id>3173</post_id>
+		<post_date>2025-11-26 14:12:25</post_date>
+		<post_date_gmt>2025-11-26 14:12:25</post_date_gmt>
+		<comment_status>closed</comment_status>
+		<ping_status>closed</ping_status>
+		<post_name>6_email_-2</post_name>
+		<status>publish</status>
+		<post_parent>0</post_parent>
+		<menu_order>11</menu_order>
+		<post_type>frm_form_actions</post_type>
+		<post_password><![CDATA[]]></post_password>
+		<is_sticky>0</is_sticky>
+	</view>
+</channel>

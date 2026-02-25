@@ -1,0 +1,22 @@
+{
+    "name": "wpxon/multistep-checkout",
+    "description": "A plugin for WooCommerce MultiStep Checkout.",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Wpxon",
+            "email": "wpxon7@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "MultiStep_Checkout\\": "includes/"
+        },
+        "files": [
+            "includes/functions.php"
+        ]
+    }
+}

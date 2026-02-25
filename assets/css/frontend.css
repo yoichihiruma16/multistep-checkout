@@ -1,0 +1,220 @@
+/* Progress Bar - Circle Design with Connecting Lines */
+.multistep-checkout-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button.next-btn {
+    float: right;
+}
+
+button.prev {
+    float: left;
+}
+
+.checkout_coupon.woocommerce-form-coupon {
+    display: block !important;
+}
+
+/* Progress Bar Container */
+.one-page-checkout {
+    position: relative;
+    margin: 0 auto 40px;
+    list-style: none;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Individual Step */
+.one-page-checkout .step {
+    padding: 0 !important;
+    border: none !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.one-page-checkout .step:not(:last-child) {
+    margin-right: 120px !important;
+}
+
+/* Connecting Lines Between Circles */
+.one-page-checkout .step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: calc(100% + 10px);
+    width: 100px;
+    height: 4px;
+    background: #ddd;
+    z-index: 0;
+    transition: background 0.4s ease;
+}
+
+.one-page-checkout .step.completed:not(:last-child)::after {
+    background: #46b450;
+}
+
+.one-page-checkout .step.active:not(:last-child)::after {
+    background: linear-gradient(to right, #0073aa 0%, #ddd 100%);
+}
+
+/* Step Title Container */
+.one-page-checkout .step-title {
+    cursor: pointer;
+    text-align: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+}
+
+/* Circle with Number */
+.one-page-checkout .step-title .number {
+    float: none;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+    color: #999;
+    background-color: #fff;
+    border: 4px solid #ddd;
+    border-radius: 50%;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto 10px auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Active Step Circle */
+.one-page-checkout .active .step-title .number {
+    background: #0073aa;
+    border-color: #0073aa;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(0, 115, 170, 0.4);
+}
+
+/* Completed Step Circle */
+.one-page-checkout .completed .step-title .number {
+    background: #46b450;
+    border-color: #46b450;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(70, 180, 80, 0.4);
+}
+
+.one-page-checkout .completed .step-title .number::before {
+    content: '✓';
+    font-size: 24px;
+    line-height: 1;
+}
+
+/* Step Title Text */
+.one-page-checkout .step-title h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #999;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.one-page-checkout .active .step-title h3 {
+    color: #0073aa;
+}
+
+.one-page-checkout .completed .step-title h3 {
+    color: #46b450;
+}
+
+/* Step Content Area */
+.multistep-checkout-wrapper .a-item {
+    padding: 30px 20px;
+    background-color: #fff;
+    overflow: hidden;
+    display: none;
+    width: 100%;
+    clear: both;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.multistep-checkout-wrapper .a-item[style*="display: block"],
+.multistep-checkout-wrapper .a-item.active {
+    display: block !important;
+}
+
+.multistep-checkout-wrapper form[name="checkout"] {
+    width: 100%;
+    display: block;
+}
+
+#checkout-step-coupon form.checkout_coupon {
+    width: 100%;
+}
+
+.woocommerce-checkout form[name=checkout] {
+    display: block;
+}
+
+#order_review {
+    width: 100% !important;
+}
+
+#order_review table.shop_table.woocommerce-checkout-review-order-table {
+    max-width: 600px;
+    margin: 0 auto 50px !important;
+}
+
+#checkout-step-payment-info {
+    position: relative;
+}
+
+#checkout-step-payment-info .prev-btn {
+    position: absolute;
+    bottom: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .one-page-checkout {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .one-page-checkout .step:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+
+    .one-page-checkout .step:not(:last-child)::after {
+        top: calc(100% + 5px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 40px;
+    }
+} 
