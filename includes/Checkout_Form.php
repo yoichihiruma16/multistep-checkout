@@ -10,13 +10,147 @@ class Checkout_Form {
     function __construct() {
         add_filter( 'msc_checkout_steps', array( $this, 'add_custom_form_step' ), 10, 1 );
         add_filter( 'msc_checkout_content', array( $this, 'add_custom_form_content' ), 10, 1 );
-        add_action( 'woocommerce_checkout_process', array( $this, 'validate_checkout_forms' ), 10 );
         add_action( 'woocommerce_checkout_update_order_meta', array( $this, 'save_formidable_data_to_order' ), 10, 2 );
         add_action( 'woocommerce_checkout_update_order_meta', array( $this, 'populate_billing_from_formidable' ), 10, 2 );
         add_action( 'add_meta_boxes', array( $this, 'add_form_info_meta_box' ) );
         
         // Add to REST API
         add_action( 'rest_api_init', array( $this, 'register_rest_api_fields' ) );
+        
+        // Add additional information section to checkout (before payment section)
+        // add_action( 'woocommerce_review_order_before_payment', array( $this, 'add_additional_info_section' ) );
+        // add_action( 'woocommerce_checkout_process', array( $this, 'validate_additional_info_fields' ) );
+        add_action( 'woocommerce_checkout_update_order_meta', array( $this, 'save_additional_info_fields' ), 20, 2 );
+    }
+
+    /**
+     * Add additional information section after billing form
+     */
+    public function add_additional_info_section() {
+        $checkout = WC()->checkout();
+        ?>
+        <div class="woocommerce-additional-info-fields">
+            <h3><?php esc_html_e( 'Aanvullende informatie', 'multistep-checkout' ); ?></h3>
+            
+            <?php
+            // Bankrekeningnummer (IBAN) - Required text field
+            woocommerce_form_field( 'msc_bank_account_number', array(
+                'type'        => 'text',
+                'class'       => array( 'form-row-wide' ),
+                'label'       => __( 'Bankrekeningnummer (IBAN)', 'multistep-checkout' ),
+                'placeholder' => __( 'NL00 BANK 0000 0000 00', 'multistep-checkout' ),
+                'required'    => true,
+            ), $checkout->get_value( 'msc_bank_account_number' ) );
+            
+            // Akkoordverklaring automatische incasso - Required checkbox
+            woocommerce_form_field( 'msc_direct_debit_agreement', array(
+                'type'        => 'checkbox',
+                'class'       => array( 'form-row-wide' ),
+                'label'       => __( 'Ik ga akkoord met automatische incasso', 'multistep-checkout' ),
+                'required'    => true,
+            ), $checkout->get_value( 'msc_direct_debit_agreement' ) );
+            
+            // Opmerkingen veld - Optional checkbox + textarea
+            woocommerce_form_field( 'msc_has_comments', array(
+                'type'        => 'checkbox',
+                'class'       => array( 'form-row-wide', 'msc-toggle-comments' ),
+                'label'       => __( 'Ik heb opmerkingen', 'multistep-checkout' ),
+                'required'    => false,
+            ), $checkout->get_value( 'msc_has_comments' ) );
+            
+            // Opmerkingen textarea (shown when checkbox is checked)
+            ?>
+            <div class="msc-comments-field" style="display: none;">
+                <?php
+                woocommerce_form_field( 'msc_comments', array(
+                    'type'        => 'textarea',
+                    'class'       => array( 'form-row-wide' ),
+                    'label'       => __( 'Opmerkingen', 'multistep-checkout' ),
+                    'placeholder' => __( 'Uw opmerkingen...', 'multistep-checkout' ),
+                    'required'    => false,
+                ), $checkout->get_value( 'msc_comments' ) );
+                ?>
+            </div>
+            <?php
+            
+            // Akkoord Privacystatement - Required checkbox
+            $privacy_page_id = get_option( 'wp_page_for_privacy_policy' );
+            $privacy_link = $privacy_page_id ? '<a href="' . esc_url( get_permalink( $privacy_page_id ) ) . '" target="_blank">' . __( 'privacystatement', 'multistep-checkout' ) . '</a>' : __( 'privacystatement', 'multistep-checkout' );
+            
+            woocommerce_form_field( 'msc_privacy_agreement', array(
+                'type'        => 'checkbox',
+                'class'       => array( 'form-row-wide' ),
+                'label'       => sprintf( __( 'Ik ga akkoord met het %s', 'multistep-checkout' ), $privacy_link ),
+                'required'    => true,
+            ), $checkout->get_value( 'msc_privacy_agreement' ) );
+            ?>
+        </div>
+        
+        <script type="text/javascript">
+            (function() {
+                document.addEventListener('DOMContentLoaded', function() {
+                    var commentsToggle = document.getElementById('msc_has_comments');
+                    var commentsField = document.querySelector('.msc-comments-field');
+                    
+                    if (commentsToggle && commentsField) {
+                        commentsToggle.addEventListener('change', function() {
+                            commentsField.style.display = this.checked ? 'block' : 'none';
+                        });
+                        
+                        // Initialize on load
+                        if (commentsToggle.checked) {
+                            commentsField.style.display = 'block';
+                        }
+                    }
+                });
+            })();
+        </script>
+        <?php
+    }
+
+    /**
+     * Validate additional info fields
+     */
+    public function validate_additional_info_fields() {
+        // Validate bank account number (IBAN)
+        if ( empty( $_POST['msc_bank_account_number'] ) ) {
+            wc_add_notice( __( 'Bankrekeningnummer is verplicht.', 'multistep-checkout' ), 'error' );
+        }
+        
+        // Validate direct debit agreement
+        if ( empty( $_POST['msc_direct_debit_agreement'] ) ) {
+            wc_add_notice( __( 'U dient akkoord te gaan met automatische incasso.', 'multistep-checkout' ), 'error' );
+        }
+        
+        // Validate privacy agreement
+        if ( empty( $_POST['msc_privacy_agreement'] ) ) {
+            wc_add_notice( __( 'U dient akkoord te gaan met het privacystatement.', 'multistep-checkout' ), 'error' );
+        }
+    }
+
+    /**
+     * Save additional info fields to order
+     */
+    public function save_additional_info_fields( $order_id, $data ) {
+        if ( ! empty( $_POST['msc_bank_account_number'] ) ) {
+            update_post_meta( $order_id, '_msc_bank_account_number', sanitize_text_field( $_POST['msc_bank_account_number'] ) );
+        }
+        
+        if ( ! empty( $_POST['msc_direct_debit_agreement'] ) ) {
+            update_post_meta( $order_id, '_msc_direct_debit_agreement', 'yes' );
+        }
+        
+        if ( ! empty( $_POST['msc_has_comments'] ) ) {
+            update_post_meta( $order_id, '_msc_has_comments', 'yes' );
+        }
+        
+        if ( ! empty( $_POST['msc_comments'] ) ) {
+            update_post_meta( $order_id, '_msc_comments', sanitize_textarea_field( $_POST['msc_comments'] ) );
+        }
+        
+        if ( ! empty( $_POST['msc_privacy_agreement'] ) ) {
+            update_post_meta( $order_id, '_msc_privacy_agreement', 'yes' );
+        }
     }
 
     /**
@@ -132,8 +266,8 @@ class Checkout_Form {
                         echo do_shortcode( '[formidable id="' . esc_attr( $form_id ) . '"]' );
                         ?>
                     </div>
-                    <button type="button" class="button prev-btn"><span><?php esc_html_e( 'Previous', 'multistep-checkout' ); ?></span></button>
-                    <button type="button" class="button next-btn"><span><?php esc_html_e( 'Continue', 'multistep-checkout' ); ?></span></button>
+                    <button type="button" class="button prev-btn"><span><?php esc_html_e( 'Vorige', 'multistep-checkout' ); ?></span></button>
+                    <button type="button" class="button next-btn"><span><?php esc_html_e( 'Volgende', 'multistep-checkout' ); ?></span></button>
                 </div>
                 <?php
                 
@@ -499,8 +633,59 @@ class Checkout_Form {
         
         $form_data = get_post_meta( $order_id, '_formidable_forms_data', true );
         
+        // Display Additional Information Section first
+        $bank_account = get_post_meta( $order_id, '_msc_bank_account_number', true );
+        $direct_debit = get_post_meta( $order_id, '_msc_direct_debit_agreement', true );
+        $has_comments = get_post_meta( $order_id, '_msc_has_comments', true );
+        $comments = get_post_meta( $order_id, '_msc_comments', true );
+        $privacy_agreement = get_post_meta( $order_id, '_msc_privacy_agreement', true );
+        
+        if ( $bank_account || $direct_debit || $privacy_agreement ) {
+            echo '<div style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">';
+            echo '<div style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #2271b1;">';
+            echo '<h4 style="margin: 0;">' . esc_html__( 'Aanvullende informatie', 'multistep-checkout' ) . '</h4>';
+            echo '</div>';
+            
+            echo '<table class="widefat striped" style="margin-top: 0; background: white;">';
+            echo '<thead><tr>';
+            echo '<th style="width: 35%; padding: 10px;">' . esc_html__( 'Field', 'multistep-checkout' ) . '</th>';
+            echo '<th style="padding: 10px;">' . esc_html__( 'Value', 'multistep-checkout' ) . '</th>';
+            echo '</tr></thead>';
+            echo '<tbody>';
+            
+            if ( $bank_account ) {
+                echo '<tr>';
+                echo '<td style="font-weight: 600; padding: 10px;">' . esc_html__( 'Bankrekeningnummer (IBAN)', 'multistep-checkout' ) . '</td>';
+                echo '<td style="padding: 10px;">' . esc_html( $bank_account ) . '</td>';
+                echo '</tr>';
+            }
+            
+            echo '<tr>';
+            echo '<td style="font-weight: 600; padding: 10px;">' . esc_html__( 'Akkoord automatische incasso', 'multistep-checkout' ) . '</td>';
+            echo '<td style="padding: 10px;">' . ( $direct_debit === 'yes' ? '<span style="color: green;">✓ Ja</span>' : '<span style="color: red;">✗ Nee</span>' ) . '</td>';
+            echo '</tr>';
+            
+            if ( $has_comments === 'yes' && $comments ) {
+                echo '<tr>';
+                echo '<td style="font-weight: 600; padding: 10px;">' . esc_html__( 'Opmerkingen', 'multistep-checkout' ) . '</td>';
+                echo '<td style="padding: 10px;">' . wp_kses_post( nl2br( esc_html( $comments ) ) ) . '</td>';
+                echo '</tr>';
+            }
+            
+            echo '<tr>';
+            echo '<td style="font-weight: 600; padding: 10px;">' . esc_html__( 'Akkoord privacystatement', 'multistep-checkout' ) . '</td>';
+            echo '<td style="padding: 10px;">' . ( $privacy_agreement === 'yes' ? '<span style="color: green;">✓ Ja</span>' : '<span style="color: red;">✗ Nee</span>' ) . '</td>';
+            echo '</tr>';
+            
+            echo '</tbody>';
+            echo '</table>';
+            echo '</div>';
+        }
+        
         if ( empty( $form_data ) ) {
-            echo '<p style="color: #666;">' . esc_html__( 'No form data available for this order.', 'multistep-checkout' ) . '</p>';
+            if ( ! $bank_account && ! $direct_debit && ! $privacy_agreement ) {
+                echo '<p style="color: #666;">' . esc_html__( 'No form data available for this order.', 'multistep-checkout' ) . '</p>';
+            }
             return;
         }
         
