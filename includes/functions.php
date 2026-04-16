@@ -13,4 +13,3 @@ function wpx_get_option( $option, $section, $default = '' ) {
  
     return $default;
 }
- 
