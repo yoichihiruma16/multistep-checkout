@@ -312,7 +312,9 @@ class Checkout_Form {
     }
 
     /**
-     * Save Formidable form data to order meta
+     * Save Formidable form data to order meta.
+     * Handles both regular fields and repeater (repeat/form) fields.
+     * Repeater rows are stored as nested arrays with field_type = 'repeater_row'.
      */
     public function save_formidable_data_to_order( $order_id, $data ) {
         if ( ! function_exists( 'WC' ) || ! WC()->cart ) {
@@ -357,20 +359,103 @@ class Checkout_Form {
                 // Get all fields for this form
                 $fields = \FrmField::get_all_for_form( $form_id );
                 $form_data = array(
-                    'form_id' => $form_id,
-                    'form_name' => $form->name,
-                    'product_id' => $product_id,
+                    'form_id'      => $form_id,
+                    'form_name'    => $form->name,
+                    'product_id'   => $product_id,
                     'product_name' => $product_name,
-                    'fields' => array(),
+                    'fields'       => array(),
                 );
 
                 foreach ( $fields as $field ) {
-                    // Skip non-input fields (divider, html, etc.)
-                    if ( in_array( $field->type, array( 'divider', 'html', 'break' ) ) ) {
+                    // Skip non-input fields (divider, html, section break, captcha, etc.)
+                    if ( in_array( $field->type, array( 'divider', 'html', 'break', 'captcha', 'end_divider' ) ) ) {
                         continue;
                     }
-                    
-                    // Get the field value from POST data
+
+                    // ── Handle REPEATER fields (type: repeat or form) ──────────────────
+                    if ( in_array( $field->type, array( 'repeat', 'form' ) ) ) {
+                        // Formidable stores the embedded sub-form ID in field_options['form_select']
+                        $embedded_form_id = isset( $field->field_options['form_select'] )
+                            ? absint( $field->field_options['form_select'] )
+                            : 0;
+
+                        if ( ! $embedded_form_id ) {
+                            continue;
+                        }
+
+                        $sub_fields = \FrmField::get_all_for_form( $embedded_form_id );
+
+                        // Determine how many rows were submitted by checking POST data
+                        $row_count = 0;
+                        foreach ( $sub_fields as $sub_field ) {
+                            if ( isset( $_POST['item_meta'][ $sub_field->id ] ) && is_array( $_POST['item_meta'][ $sub_field->id ] ) ) {
+                                $row_count = max( $row_count, count( $_POST['item_meta'][ $sub_field->id ] ) );
+                            }
+                        }
+
+                        // Iterate each repeater row and collect sub-field values
+                        for ( $row = 0; $row < $row_count; $row++ ) {
+                            $row_sub_fields = array();
+
+                            foreach ( $sub_fields as $sub_field ) {
+                                // Skip structural / non-input sub-fields
+                                if ( in_array( $sub_field->type, array( 'divider', 'html', 'break', 'captcha', 'end_divider', 'repeat', 'form' ) ) ) {
+                                    continue;
+                                }
+
+                                $sub_value = null;
+
+                                if ( isset( $_POST['item_meta'][ $sub_field->id ] ) ) {
+                                    $raw = $_POST['item_meta'][ $sub_field->id ];
+
+                                    if ( is_array( $raw ) && array_key_exists( $row, $raw ) ) {
+                                        // Indexed per row: item_meta[SUB_FIELD_ID][ROW_INDEX]
+                                        $sub_value = $raw[ $row ];
+                                    } elseif ( ! is_array( $raw ) ) {
+                                        // Scalar value (shared across rows — edge case)
+                                        $sub_value = $raw;
+                                    }
+                                }
+
+                                if ( $sub_value !== null && $sub_value !== '' ) {
+                                    // Compound sub-fields (name/address) may come as associative arrays
+                                    if ( is_array( $sub_value ) ) {
+                                        $sub_value = implode( ' ', array_filter( array_map( 'sanitize_text_field', $sub_value ) ) );
+                                    } else {
+                                        $sub_value = sanitize_text_field( $sub_value );
+                                    }
+
+                                    if ( $sub_value !== '' ) {
+                                        $row_sub_fields[] = array(
+                                            'field_id'    => $sub_field->id,
+                                            'field_key'   => $sub_field->field_key,
+                                            'field_name'  => $sub_field->name,
+                                            'field_label' => $sub_field->name,
+                                            'field_type'  => $sub_field->type,
+                                            'value'       => $sub_value,
+                                        );
+                                    }
+                                }
+                            }
+
+                            if ( ! empty( $row_sub_fields ) ) {
+                                $form_data['fields'][] = array(
+                                    'field_id'    => $field->id,
+                                    'field_key'   => $field->field_key,
+                                    'field_name'  => $field->name,
+                                    'field_label' => $field->name . ' #' . ( $row + 1 ),
+                                    'field_type'  => 'repeater_row',
+                                    'value'       => $row_sub_fields, // nested array of sub-field data
+                                );
+                            }
+                        }
+
+                        // Skip standard field handling below
+                        continue;
+                    }
+                    // ── End repeater handling ──────────────────────────────────────────
+
+                    // Get the field value from POST data (regular fields)
                     $value = null;
                     
                     // Check if item_meta array exists
@@ -382,21 +467,30 @@ class Checkout_Form {
                     }
                     
                     if ( $value !== null && $value !== '' ) {
-                        // Handle array values (checkboxes, multi-select, etc.)
+                        // Handle array values (checkboxes, multi-select, compound name/address, etc.)
                         if ( is_array( $value ) ) {
-                            $value = implode( ', ', array_map( 'sanitize_text_field', $value ) );
+                            // Check if it's an associative compound array (name/address sub-fields)
+                            if ( array_keys( $value ) !== range( 0, count( $value ) - 1 ) ) {
+                                // Associative: join values
+                                $value = implode( ' ', array_filter( array_map( 'sanitize_text_field', $value ) ) );
+                            } else {
+                                // Sequential: checkbox / multi-select labels
+                                $value = implode( ', ', array_map( 'sanitize_text_field', $value ) );
+                            }
                         } else {
                             $value = sanitize_text_field( $value );
                         }
                         
-                        $form_data['fields'][] = array(
-                            'field_id' => $field->id,
-                            'field_key' => $field->field_key,
-                            'field_name' => $field->name,
-                            'field_label' => $field->name,
-                            'field_type' => $field->type,
-                            'value' => $value,
-                        );
+                        if ( $value !== '' ) {
+                            $form_data['fields'][] = array(
+                                'field_id'    => $field->id,
+                                'field_key'   => $field->field_key,
+                                'field_name'  => $field->name,
+                                'field_label' => $field->name,
+                                'field_type'  => $field->type,
+                                'value'       => $value,
+                            );
+                        }
                     }
                 }
 
@@ -441,9 +535,12 @@ class Checkout_Form {
             return;
         }
 
-        // Extract field values from the Abonnee form
+        // Extract field values from the Abonnee form (skip repeater_row entries)
         $form_values = array();
         foreach ( $abonnee_form['fields'] as $field ) {
+            if ( $field['field_type'] === 'repeater_row' ) {
+                continue;
+            }
             $form_values[ $field['field_name'] ] = $field['value'];
             // Also store by field type for easier mapping
             $form_values[ $field['field_type'] . '_' . $field['field_name'] ] = $field['value'];
@@ -619,7 +716,8 @@ class Checkout_Form {
     }
 
     /**
-     * Display Formidable form data in admin order page
+     * Display Formidable form data in admin order page.
+     * Supports both regular fields and repeater rows (field_type = 'repeater_row').
      */
     public function display_formidable_data_in_admin( $post_or_order ) {
         // Handle both post object and order object
@@ -642,44 +740,18 @@ class Checkout_Form {
         
         if ( $bank_account || $direct_debit || $privacy_agreement ) {
             echo '<div style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">';
-            echo '<div style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #2271b1;">';
-            echo '<h4 style="margin: 0;">' . esc_html__( 'Aanvullende informatie', 'multistep-checkout' ) . '</h4>';
-            echo '</div>';
-            
+            echo '<div style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #2271b1;"><h4 style="margin: 0;">' . esc_html__( 'Aanvullende informatie', 'multistep-checkout' ) . '</h4></div>';
             echo '<table class="widefat striped" style="margin-top: 0; background: white;">';
-            echo '<thead><tr>';
-            echo '<th style="width: 35%; padding: 10px;">' . esc_html__( 'Field', 'multistep-checkout' ) . '</th>';
-            echo '<th style="padding: 10px;">' . esc_html__( 'Value', 'multistep-checkout' ) . '</th>';
-            echo '</tr></thead>';
-            echo '<tbody>';
-            
+            echo '<thead><tr>'; echo '<th style="width: 35%; padding: 10px;">' . esc_html__( 'Field', 'multistep-checkout' ) . '</th>'; echo '<th style="padding: 10px;">' . esc_html__( 'Value', 'multistep-checkout' ) . '</th></tr></thead><tbody>';
             if ( $bank_account ) {
-                echo '<tr>';
-                echo '<td style="font-weight: 600; padding: 10px;">' . esc_html__( 'Bankrekeningnummer (IBAN)', 'multistep-checkout' ) . '</td>';
-                echo '<td style="padding: 10px;">' . esc_html( $bank_account ) . '</td>';
-                echo '</tr>';
+                echo '<tr>'; echo '<td style="font-weight: 600; padding: 10px;">' . esc_html__( 'Bankrekeningnummer (IBAN)', 'multistep-checkout' ) . '</td>'; echo '<td style="padding: 10px;">' . esc_html( $bank_account ) . '</td></tr>';
             }
-            
-            echo '<tr>';
-            echo '<td style="font-weight: 600; padding: 10px;">' . esc_html__( 'Akkoord automatische incasso', 'multistep-checkout' ) . '</td>';
-            echo '<td style="padding: 10px;">' . ( $direct_debit === 'yes' ? '<span style="color: green;">✓ Ja</span>' : '<span style="color: red;">✗ Nee</span>' ) . '</td>';
-            echo '</tr>';
-            
+            echo '<tr>'; echo '<td style="font-weight: 600; padding: 10px;">' . esc_html__( 'Akkoord automatische incasso', 'multistep-checkout' ) . '</td>'; echo '<td style="padding: 10px;">' . ( $direct_debit === 'yes' ? '<span style="color: green;">✓ Ja</span>' : '<span style="color: red;">✗ Nee</span>' ) . '</td></tr>';
             if ( $has_comments === 'yes' && $comments ) {
-                echo '<tr>';
-                echo '<td style="font-weight: 600; padding: 10px;">' . esc_html__( 'Opmerkingen', 'multistep-checkout' ) . '</td>';
-                echo '<td style="padding: 10px;">' . wp_kses_post( nl2br( esc_html( $comments ) ) ) . '</td>';
-                echo '</tr>';
+                echo '<tr>'; echo '<td style="font-weight: 600; padding: 10px;">' . esc_html__( 'Opmerkingen', 'multistep-checkout' ) . '</td>'; echo '<td style="padding: 10px;">' . wp_kses_post( nl2br( esc_html( $comments ) ) ) . '</td></tr>';
             }
-            
-            echo '<tr>';
-            echo '<td style="font-weight: 600; padding: 10px;">' . esc_html__( 'Akkoord privacystatement', 'multistep-checkout' ) . '</td>';
-            echo '<td style="padding: 10px;">' . ( $privacy_agreement === 'yes' ? '<span style="color: green;">✓ Ja</span>' : '<span style="color: red;">✗ Nee</span>' ) . '</td>';
-            echo '</tr>';
-            
-            echo '</tbody>';
-            echo '</table>';
-            echo '</div>';
+            echo '<tr>'; echo '<td style="font-weight: 600; padding: 10px;">' . esc_html__( 'Akkoord privacystatement', 'multistep-checkout' ) . '</td>'; echo '<td style="padding: 10px;">' . ( $privacy_agreement === 'yes' ? '<span style="color: green;">✓ Ja</span>' : '<span style="color: red;">✗ Nee</span>' ) . '</td></tr>';
+            echo '</tbody>'; echo '</table>'; echo '</div>';
         }
         
         if ( empty( $form_data ) ) {
@@ -692,40 +764,29 @@ class Checkout_Form {
         // Show form data
         foreach ( $form_data as $form ) {
             echo '<div style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">';
-            
             // Display form name and product info
-            echo '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #2271b1;">';
-            echo '<h4 style="margin: 0;">' . esc_html( $form['form_name'] ) . '</h4>';
-            
-            if ( ! empty( $form['product_name'] ) ) {
-                echo '<span style="background: #2271b1; color: white; padding: 5px 12px; border-radius: 3px; font-size: 12px; font-weight: 600;">';
-                echo esc_html( $form['product_name'] );
-                echo '</span>';
-            }
-            
-            echo '</div>';
-            
+            echo '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #2271b1;"><h4 style="margin: 0;">' . esc_html( $form['form_name'] ) . '</h4>'; if ( ! empty( $form['product_name'] ) ) { echo '<span style="background: #2271b1; color: white; padding: 5px 12px; border-radius: 3px; font-size: 12px; font-weight: 600;">' . esc_html( $form['product_name'] ) . '</span>'; } echo '</div>';
             if ( empty( $form['fields'] ) ) {
                 echo '<p style="color: #d63638; margin: 0;">' . esc_html__( 'No fields captured.', 'multistep-checkout' ) . '</p>';
             } else {
                 echo '<table class="widefat striped" style="margin-top: 0; background: white;">';
-                echo '<thead><tr>';
-                echo '<th style="width: 35%; padding: 10px;">' . esc_html__( 'Field', 'multistep-checkout' ) . '</th>';
-                echo '<th style="padding: 10px;">' . esc_html__( 'Value', 'multistep-checkout' ) . '</th>';
-                echo '</tr></thead>';
-                echo '<tbody>';
-                
+                echo '<thead><tr>'; echo '<th style="width: 35%; padding: 10px;">' . esc_html__( 'Field', 'multistep-checkout' ) . '</th>'; echo '<th style="padding: 10px;">' . esc_html__( 'Value', 'multistep-checkout' ) . '</th></tr></thead><tbody>';
                 foreach ( $form['fields'] as $field ) {
-                    echo '<tr>';
-                    echo '<td style="font-weight: 600; padding: 10px;">' . esc_html( $field['field_label'] ) . '</td>';
-                    echo '<td style="padding: 10px;">' . wp_kses_post( nl2br( $field['value'] ) ) . '</td>';
-                    echo '</tr>';
+                    if ( $field['field_type'] === 'repeater_row' ) {
+                        // Render repeater row header
+                        echo '<tr>'; echo '<td colspan="2" style="font-weight: 700; padding: 8px 10px; background: #e8f0fb; border-top: 2px solid #c3d4f0;">' . esc_html( $field['field_label'] ) . '</td>'; echo '</tr>';
+                        // Render each sub-field of this repeater row
+                        if ( is_array( $field['value'] ) ) {
+                            foreach ( $field['value'] as $sub_field ) {
+                                echo '<tr>'; echo '<td style="font-weight: 600; padding: 8px 10px 8px 30px; color: #555;">&#8627; ' . esc_html( $sub_field['field_label'] ) . '</td>'; echo '<td style="padding: 8px 10px;">' . wp_kses_post( nl2br( esc_html( $sub_field['value'] ) ) ) . '</td>'; echo '</tr>';
+                            }
+                        }
+                    } else {
+                        // Regular field
+                        echo '<tr>'; echo '<td style="font-weight: 600; padding: 10px;">' . esc_html( $field['field_label'] ) . '</td>'; echo '<td style="padding: 10px;">' . wp_kses_post( nl2br( esc_html( $field['value'] ) ) ) . '</td>'; echo '</tr>';
+                    }
                 }
-                
-                echo '</tbody>';
-                echo '</table>';
-            }
-            
+                echo '</tbody>'; echo '</table>';}
             echo '</div>';
         }
     }
@@ -747,22 +808,10 @@ class Checkout_Form {
                     'items' => array(
                         'type' => 'object',
                         'properties' => array(
-                            'form_id' => array(
-                                'type' => 'integer',
-                                'description' => __( 'Formidable Form ID', 'multistep-checkout' ),
-                            ),
-                            'form_name' => array(
-                                'type' => 'string',
-                                'description' => __( 'Formidable Form Name', 'multistep-checkout' ),
-                            ),
-                            'product_id' => array(
-                                'type' => 'integer',
-                                'description' => __( 'Product ID', 'multistep-checkout' ),
-                            ),
-                            'product_name' => array(
-                                'type' => 'string',
-                                'description' => __( 'Product Name', 'multistep-checkout' ),
-                            ),
+                            'form_id' => array( 'type' => 'integer', 'description' => __( 'Formidable Form ID', 'multistep-checkout' ), ),
+                            'form_name' => array( 'type' => 'string', 'description' => __( 'Formidable Form Name', 'multistep-checkout' ), ),
+                            'product_id' => array( 'type' => 'integer', 'description' => __( 'Product ID', 'multistep-checkout' ), ),
+                            'product_name' => array( 'type' => 'string', 'description' => __( 'Product Name', 'multistep-checkout' ), ),
                             'fields' => array(
                                 'type' => 'array',
                                 'description' => __( 'Form fields and values', 'multistep-checkout' ),
@@ -774,7 +823,7 @@ class Checkout_Form {
                                         'field_name' => array( 'type' => 'string' ),
                                         'field_label' => array( 'type' => 'string' ),
                                         'field_type' => array( 'type' => 'string' ),
-                                        'value' => array( 'type' => 'string' ),
+                                        'value' => array( 'type' => array( 'string', 'array' ) ),
                                     ),
                                 ),
                             ),
